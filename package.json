@@ -1,11 +1,5 @@
 {
   "name": "lang-chain",
-  "private": true,
-  "workspaces": [
-    "apps/*",
-    "services/*",
-    "shared/*"
-  ],
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -15,7 +9,14 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
-    "mongoose": "^8.15.1"
+  "private": true,
+  "workspaces": [
+    "api/auth-service",
+    "api/user-service",
+    "shared"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "typescript": "^5.8.3"
   }
 }

@@ -1,0 +1,40 @@
+lang-chain/
+├── .git/
+├── .DS_Store
+├── api/
+│   ├── auth-service/
+│   │   └── tsconfig.json
+│   └── user-service/
+├── node_modules/
+├── package.json
+├── package-lock.json
+├── shared/
+│   ├── src/
+│   ├── package.json
+│   └── tsconfig.json
+└── tsconfig.json
+
+
+Create workspace
+  npm init -w api/user-service 
+
+Dependency management:
+  To access type written inside shared package
+
+  package.json (Root level):
+    "workspaces": [
+      "api/auth-service",
+      "api/user-service",
+      "shared"
+    ]
+    Tells npm to treat each package as individual project
+    Reason for installing packages inside node_modules
+
+    tsconfig.json (Package level)
+    "dependencies": {
+      "shared": "1.0.0"
+    }
+    Tells npm that give package is necessary to install in order to execute this package 
+
+  
+  
