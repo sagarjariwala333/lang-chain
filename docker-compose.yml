@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  auth-service:
+    build:
+      context: ./api/auth-service
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - app-network
+
+  user-service:
+    build:
+      context: ./api/user-service
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge 
