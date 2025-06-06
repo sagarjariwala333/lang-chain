@@ -36,5 +36,9 @@ Dependency management:
     }
     Tells npm that give package is necessary to install in order to execute this package 
 
+Install dependencies:
+  For both external and internal
+  npm i api-shared -w api/auth-service
+
   
   

@@ -9,8 +9,7 @@
     "dev": "nodemon src/index.ts"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "mongoose": "^8.1.0",
+    "api-shared": "^1.0.0",
     "shared": "*"
   },
   "devDependencies": {

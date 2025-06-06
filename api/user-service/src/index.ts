@@ -1,6 +1,6 @@
 import express from 'express';
 import userRoutes from './routes/user.routes';
-import { connect } from 'shared/src/utility/connect';
+import { connect } from 'api-shared/utils'
 
 const app = express();
 const PORT = process.env.PORT || 3001;

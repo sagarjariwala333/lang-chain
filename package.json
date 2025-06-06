@@ -12,8 +12,10 @@
   "private": true,
   "workspaces": [
     "api/auth-service",
+    "shared",
+    "api/api-shared",
     "api/user-service",
-    "shared"
+    "api/gateway"
   ],
   "devDependencies": {
     "@types/node": "^22.15.29",
